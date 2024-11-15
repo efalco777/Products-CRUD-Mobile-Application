@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">crud_products</string>
+    <string name="product_details_screen_app_bar_title">Details</string>
+    <string name="common_try_again">Try again</string>
+    <string name="common_back_button_content_description">Back</string>
+    <string name="error_unexpected_message">Unexpected error occurred.</string>
+</resources>
