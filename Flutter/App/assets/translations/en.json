@@ -1,0 +1,15 @@
+{
+   "common": {
+      "not_found": "Not found",
+      "refresh": "Refresh"
+   },
+   "products_page": {
+      "app_bar_title": "Products"
+   },
+   "product_details_page": {
+      "app_bar_title": "Details"
+   },
+   "errors": {
+      "unexpected": "Unexpected error occured"
+   }
+}

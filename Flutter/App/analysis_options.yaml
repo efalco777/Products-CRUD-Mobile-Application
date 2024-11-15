@@ -1,0 +1,16 @@
+include: package:very_good_analysis/analysis_options.yaml
+analyzer:
+  errors:
+    constant_identifier_names: ignore
+    library_private_types_in_public_api: ignore
+    one_member_abstracts: ignore
+    public_member_api_docs: ignore
+    sort_pub_dependencies: ignore
+    lines_longer_than_80_chars: ignore
+    avoid_renaming_method_parameters: ignore
+    prefer_const_constructors: ignore
+  exclude:
+  - '**.freezed.dart'
+  - '**.g.dart'
+  - '**.gr.dart'
+  - '**/generated_plugin_registrant.dart'
