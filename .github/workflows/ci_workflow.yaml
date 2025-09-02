@@ -1,0 +1,27 @@
+name: PR Commit — Flutter Doctor
+
+on:
+  pull_request:  # runs on opened, synchronize (new commits), reopened by default
+    branches: ['**']
+
+jobs:
+  flutter-doctor:
+    runs-on: ubuntu-latest
+    container: ghcr.io/cirruslabs/flutter:stable
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./Flutter/App
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show working directory
+        run: echo "PWD=$(pwd)"
+
+      - name: Flutter version
+        run: flutter --version
+
+      - name: Flutter doctor
+        run: flutter doctor || true

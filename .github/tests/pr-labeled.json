@@ -1,0 +1,24 @@
+{
+    "action": "labeled",
+    "label": {
+        "name": "workflow_test"
+    },
+    "pull_request": {
+        "number": 1,
+        "head": {
+            "ref": "feature/test",
+            "sha": "HEAD"
+        },
+        "base": {
+            "ref": "dev"
+        }
+    },
+    "repository": {
+        "name": "your-repo",
+        "full_name": "your-org/your-repo",
+        "default_branch": "main",
+        "owner": {
+            "login": "your-org"
+        }
+    }
+}

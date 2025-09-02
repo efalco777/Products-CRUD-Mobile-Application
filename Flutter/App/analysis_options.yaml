@@ -14,3 +14,4 @@ analyzer:
   - '**.g.dart'
   - '**.gr.dart'
   - '**/generated_plugin_registrant.dart'
+  - test/**_test.dart

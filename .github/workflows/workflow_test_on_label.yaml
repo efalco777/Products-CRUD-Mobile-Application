@@ -1,0 +1,31 @@
+name: Workflow Test (On Label)
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  workflow-test:
+    # Only run when the PR gets the "workflow_test" label
+    if: ${{ github.event.label.name == 'workflow_test' }}
+    runs-on: ubuntu-latest
+
+    # Use a prebuilt Flutter image so we don't rely on setup actions (stable under `act`)
+    container: ghcr.io/cirruslabs/flutter:stable
+
+    # Run steps from your Flutter project root
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./Flutter/App
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show working directory and list files
+        run: |
+          echo "PWD=$(pwd)"
+          ls -la
+
+      - name: Show Flutter version
+        run: flutter --version
