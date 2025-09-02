@@ -13,7 +13,7 @@ class _Loaded extends StatelessWidget {
         child: Column(
           children: [
             AspectRatio(
-              aspectRatio: 16 / 9,
+              aspectRatio: 16 / 10,
               child: CachedImage(
                 url: productDetails.images.firstOrNull,
               ),
