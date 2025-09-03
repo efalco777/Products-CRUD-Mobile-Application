@@ -25,3 +25,13 @@ jobs:
 
       - name: Flutter doctor
         run: flutter doctor || true
+
+      - name: Enforce "workflow_test" label
+        run: |
+          # Check if "workflow_test" label is in the list of labels
+          if ! echo "${{ toJSON(github.event.pull_request.labels) }}" | grep -q '"name":"workflow_test"'; then
+            echo "❌ Required label 'workflow_test' is missing!"
+            exit 1
+          else
+            echo "✅ 'workflow_test' label is present."
+          fi
